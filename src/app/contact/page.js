@@ -1,9 +1,12 @@
+import Footersection from "../componets/footer/page";
+import Navber from "../componets/navber/page";
 
 
 const Contactus = () => {
     return (
-        <div>
-            
+        <div className="container mx-auto">
+            <Navber/>
+            <Footersection/>
         </div>
     );
 };
