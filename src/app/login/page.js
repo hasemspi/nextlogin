@@ -7,12 +7,15 @@ const LoginForm = () => {
     return (
         <div>
             <Navber />
-            <div className="card bg-base-100 w-96 shadow-sm">
-                <div className="card-body">
-                    <h2 className="card-title">User Loign</h2>
-                    <LoginPage />
+            <div className="flex items-center justify-center min-h-screen bg-base-200">
+                <div className="card bg-base-100 w-96 shadow-sm">
+                    <div className="card-body">
+                        <h2 className="card-title">User Login</h2>
+                        <LoginPage />
+                    </div>
                 </div>
             </div>
+
 
             <Footersection />
         </div>
