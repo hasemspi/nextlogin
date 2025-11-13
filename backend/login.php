@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config.php';
 header('Content-Type: application/json; charset=UTF-8');
 
@@ -36,6 +37,14 @@ if ($result && $result->num_rows > 0) {
 
     // Check MD5 password
     if ($user['password'] === md5($password)) {
+
+    $_SESSION['user'] = [
+            'id' => $user['id'],
+            'email' => $user['email'],
+            'name' => $user['name'] ?? ''
+        ];
+
+
         echo json_encode([
             "success" => true,
             "message" => "Login successful",

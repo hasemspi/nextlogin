@@ -18,6 +18,7 @@ const LoginForm = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
+         credentials: "include",
     });
 
       
@@ -27,7 +28,9 @@ const LoginForm = () => {
         // alert("Hello Dashboard");
         console.log("User:", data.user);
         // 🔹 Example: Redirect user
-        window.location.href = "/about";
+        window.location.href = "/dashboard";
+      }else {
+        alert(data.message || "Invalid login credentials");
       }
     } catch (err) {
       console.error("Login failed:", err);
